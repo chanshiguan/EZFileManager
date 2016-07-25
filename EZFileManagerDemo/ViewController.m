@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "EZFileManager.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    EZFileManager *fileManager = [EZFileManager sharedInstance];
+    NSString *path = [EZFileManager documentsPath:@"1.zip"];
+    [fileManager setFileAttributes:@{@"test":@"tes1111t"} AtPath:path];
+    NSDictionary *dic = [fileManager fileInfoAtPath:path];
+    NSLog(@"dic= %@",dic);
 }
 
 - (void)didReceiveMemoryWarning {
