@@ -170,4 +170,13 @@ static EZFileManager *instance = nil;
     }
     return newFileInfo;
 }
+
+- (NSData *)dataWithFilePath:(NSString *)filePath
+{
+    if ([self fileExistsAtPath:filePath]) {
+        return [NSData dataWithContentsOfFile:filePath];
+    } else {
+        return nil;
+    }
+}
 @end

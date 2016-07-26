@@ -116,4 +116,13 @@
  *  @return 返回文件详细信息
  */
 - (NSDictionary *)fileInfoAtPath:(NSString *)filePath;
+
+/**
+ *  读取文件
+ *
+ *  @param filePath 文件路径
+ *
+ *  @return 文件内容
+ */
+- (NSData *)dataWithFilePath:(NSString *)filePath;
 @end
