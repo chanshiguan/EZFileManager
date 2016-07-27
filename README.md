@@ -11,9 +11,9 @@
 ##所提供的方法
 ``` objective-c
 * + (NSString *)documentsPath;  //获取documents的路径
-* +(NSString *)libraryPath;     //获取library的路径
-* +(NSString *)cachesPath;      //获取caches的路径
-* +(NSString *)documentsPath:(NSString *)fileName;    //获取文件路径
+* + (NSString *)libraryPath;     //获取library的路径
+* + (NSString *)cachesPath;      //获取caches的路径
+* + (NSString *)documentsPath:(NSString *)fileName;    //获取文件路径
 * - (BOOL)fileExistsAtPath:(NSString *)filePath;      //判断文件存在与否
 * - (BOOL)createFolderAtPath:(NSString *)folderPath;  //根据路径创建文件夹
 * - (void)createFolderAtPath:(NSString *)folderPath block:(void(^)(BOOL result))block;    //根据路径创建文件夹
